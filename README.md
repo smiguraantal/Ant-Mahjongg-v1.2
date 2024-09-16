@@ -17,7 +17,9 @@ Additionally, all images and HTML files used by the program have been moved to t
 
 ## Home page
 
-The game application also had a website, and its static version can be accessed at the following link: [https://smiguraantal.github.io/Ant-Mahjongg-v1.2/index.html](https://smiguraantal.github.io/Ant-Mahjongg-v1.2/index.html)
+The game application also had a website, and its static version can be accessed at the following link:
+
+[https://smiguraantal.github.io/Ant-Mahjongg-v1.2/index.html](https://smiguraantal.github.io/Ant-Mahjongg-v1.2/index.html)
 
 ## Additional Information
 
