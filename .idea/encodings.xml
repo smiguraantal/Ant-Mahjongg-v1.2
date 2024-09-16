@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/LICENSE" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/README.md" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/doc" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/docs" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/docs/picture/classic.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/docs/picture/fish.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/docs/picture/red-dragon.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/docs/picture/wind-bei.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/games.dat" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/example/resources" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/backgrounds" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/doc" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/icons" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/images" charset="windows-1250" />
+  </component>
+</project>

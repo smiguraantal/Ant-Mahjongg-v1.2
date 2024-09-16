@@ -1,0 +1,431 @@
+<HTML>
+<HEAD>
+<meta http-equiv=Content-Type content='text/html; charset=windows-1250'>
+<META NAME="htmlpad"Content="slittle Software">
+<TITLE>névtelen</TITLE>
+</HEAD>
+<BODY lang=HU background="" >
+<P align=center><FONT face="Monotype Corsiva" size=6><STRONG><A 
+name=mahjongg></A>Ant-Mahjongg 
+v1.2</STRONG></FONT></P>
+<P align=center><FONT size=3>Leszedős-logikai játék</FONT>&nbsp;</P>
+<P align=center><FONT face="Monotype Corsiva" color=#004080><IMG hspace=0 
+src="home.png" align=baseline border=0  ?></FONT></P>
+<P align=center><FONT face="Monotype Corsiva" 
+color=#004080></FONT>&nbsp;</P><FONT color=#004080>
+<H2 align=left><FONT face="Monotype Corsiva" 
+color=#000000><A name=overview></A>Áttekintés</FONT></H2><FONT color=#004080>
+<P align=justify><FONT color=#000000>A Mahjongg játék célja, hogy&nbsp;a táblán 
+található összes követ levegyük úgy, hogy megkeressük az összeillő párokat. 
+</FONT></P>
+<P align=justify>&nbsp;</P><FONT color=#000000></FONT></FONT>
+<H2><FONT face="Monotype Corsiva" color=#000000><A name=rules></A>Játékszabályok</FONT></H2><FONT 
+color=#004080>
+<P align=justify><FONT color=#000000>A játék kezdésekor a táblán 144 db kő 
+található. A köveken&nbsp;lévő&nbsp;ábrák&nbsp;hét&nbsp;különféle csoporthoz 
+sorolhatók: </FONT></P>
+<P align=left><FONT color=#000000></FONT>&nbsp;</P>
+<P>
+<TABLE cellSpacing=0 cellPadding=5 width=450 align=center border=0>
+  
+  <TR>
+    <TD vAlign=center>
+      <P><STRONG>Körök</STRONG></P></TD>
+    <TD vAlign=center><IMG hspace=0 src="circles.png" align=baseline 
+      border=0  ?></TD></TR>
+  <TR>
+    <TD vAlign=center>
+      <P><STRONG>Bambuszok</STRONG></P></TD>
+    <TD vAlign=center><IMG hspace=0 src="bamboo.png" align=baseline 
+      border=0  ?></TD></TR>
+  <TR>
+    <TD vAlign=center>
+      <P><STRONG>Írások</STRONG></P></TD>
+    <TD vAlign=center><IMG hspace=0 src="writing.png" align=baseline 
+      border=0  ?></TD></TR>
+  <TR>
+    <TD vAlign=center>
+      <P><STRONG>Évszakok</STRONG></P></TD>
+    <TD vAlign=center><IMG hspace=0 src="season.png" align=baseline 
+      border=0  ?></TD></TR>
+  <TR>
+    <TD vAlign=center>
+      <P><STRONG>Virágok</STRONG></P></TD>
+    <TD vAlign=center><IMG hspace=0 src="flower.png" align=baseline 
+      border=0  ?></TD></TR>
+  <TR>
+    <TD vAlign=center>
+      <P><STRONG>Szelek</STRONG></P></TD>
+    <TD vAlign=center><IMG hspace=0 src="wind.png" align=baseline 
+      border=0  ?></TD></TR>
+  <TR>
+    <TD vAlign=center>
+      <P><STRONG>Sárkányok&nbsp;&nbsp;&nbsp;&nbsp; 
+      </STRONG> 
+      </P></TD>
+    <TD vAlign=center><IMG hspace=0 src="dragon.png" align=baseline 
+      border=0  ?></TD></TR></TABLE></P>
+<P align=justify><FONT face="Monotype Corsiva" color=#000000></FONT>&nbsp;</P>
+<P align=justify><FONT color=#000000>Az évszakok és a virágok családjához 
+tartozó kövekből mindössze egy-egy van, a többiből&nbsp;négy (azaz&nbsp;két 
+pár). A kövek értéke akkor egyezik meg, ha ugyanolyanok, viszont az évszakok és 
+a virágok család kövei a saját családjukon belül azonos értéket képviselnek. A 
+kövek levételének egyik feltétele tehát, hogy értékben megegyezzenek, a másik 
+pedig, hogy vagy a jobb vagy bal oldaluk ne érintkezzen egy&nbsp;másik kővel, 
+illetve legfelül legyenek. Kijelölésük&nbsp;ellenkező esetben&nbsp;nem is 
+lehetséges. Egy követ egérkattintással lehet kiválasztani. A kijelölés 
+megszűntethető a kövön való ismételt klikkeléssel, a háttérképen való 
+klikkeléssel, illetve ha egy olyan kőre kattintunk, mely szintén kijelölhető. Ha 
+sikerült&nbsp;egy össze illő párt találni, akkor a két elem eltűnik, és 
+folytatódhat a további keresés. A játéknak akkor van vége, ha elfogyott az 
+összes kő.</FONT></P>
+<P align=justify><FONT color=#000000></FONT>&nbsp;</P></FONT>
+<H2><FONT face="Monotype Corsiva" 
+color=#000000><A name=penalties></A>Büntetőmásodpercek</FONT></H2><FONT color=#004080><FONT 
+color=#000000>
+<P align=justify><FONT color=#000000>A program büntetőmásodpercekkel honorálja 
+azoknak a funkcióknak az igénybevételét, melyek a játék könnyebb megoldásához 
+vezetnek. Ezek a másodpercek minden esetben növelik az időeredményt!</FONT></P>
+<P>&nbsp;</P>
+<P>
+<TABLE borderColor=#000000 cellSpacing=1 cellPadding=1 width=350 align=center 
+border=1>
+  
+  <TR>
+    <TD align=middle><STRONG><EM>Ikon</EM></STRONG></TD>
+    <TD align=middle><STRONG><EM><FONT 
+      color=#000000>Művelet</FONT></EM></STRONG></TD>
+    <TD align=middle><STRONG><EM><FONT 
+      color=#000000>Büntetőmásodperc</FONT></EM></STRONG></TD></TR>
+  <TR>
+    <TD noWrap align=middle><IMG hspace=0 src="undo.gif" 
+      align=baseline border=0  ?></TD>
+    <TD><FONT color=#000000>Visszavonás</FONT></TD>
+    <TD align=right><FONT color=#000000>10</FONT></TD></TR>
+  <TR>
+    <TD align=middle><IMG hspace=0 src="redo.gif" align=baseline 
+      border=0  ?></TD>
+    <TD><FONT color=#000000>Ismét</FONT></TD>
+    <TD align=right><FONT color=#000000>10</FONT></TD></TR>
+  <TR>
+    <TD align=middle><IMG hspace=0 src="swap.gif" align=baseline 
+      border=0  ?></TD>
+    <TD><FONT color=#000000>Csere</FONT></TD>
+    <TD align=right><FONT color=#000000>20</FONT></TD></TR>
+  <TR>
+    <TD align=middle><IMG hspace=0 src="shuffle.gif" align=baseline 
+      border=0  ?></TD>
+    <TD><FONT color=#000000>Keverés</FONT></TD>
+    <TD align=right><FONT color=#000000>30</FONT></TD></TR>
+  <TR>
+    <TD align=middle><IMG hspace=0 src="help.gif" align=baseline 
+      border=0  ?></TD>
+    <TD><FONT color=#000000>Segítség</FONT></TD>
+    <TD align=right><FONT color=#000000>30</FONT></TD></TR></TABLE></P>
+<P></FONT></FONT></FONT><FONT color=#004080></FONT>&nbsp;</P><FONT face="Monotype Corsiva" 
+color=#004080><FONT color=#004080><FONT color=#000000><FONT 
+face="Times New Roman">
+<H2 align=justify><FONT face="Monotype Corsiva"><A name=menus></A>Menüpontok</FONT></H2>
+<P><FONT color=#004080><FONT color=#000000><EM><FONT 
+color=#000000><STRONG>Játék</STRONG></FONT></EM></P><FONT size=+0>
+<P><FONT color=#000000><U>Új:</U></FONT></P>
+<P align=justify><FONT color=#000000>Új játék kérésekor a program 
+véletlenszerűen helyezi el a köveket az éppen kiválasztott elrendezésnek 
+megfelelően.</FONT> </P>
+<P><FONT color=#000000><U>Játék kiválasztása:</U> </FONT></P>
+<P align=justify><FONT color=#000000>A&nbsp;programban elrendezésenként&nbsp;tíz 
+előredefiniált leosztás közül lehet választani. Az éppen kiválasztott játék 
+száma #01-es formátumban jelenik meg az állapotsor játék mezőjében.</FONT></P>
+<P><FONT color=#000000><U>Megnyitás / Mentés:</U> </FONT></P>
+<P align=justify><FONT color=#000000><FONT size=+0>Ha egy játékot&nbsp;máskor 
+szeretnénk folytatni, akkor lehetőségünk van annak elmentésére. Mentéskor az 
+elrendezés,&nbsp;a kiválasztott szabály,&nbsp;az elért időeredmény, a 
+büntetőmásodpercek, a visszavonható-,&nbsp;és megismételhető lépések, sőt a 
+játék kezdeti leosztása is eltárolódik.&nbsp;</FONT><FONT size=+0>Az elmentett 
+játékok elrendezés, azon belül pedig név szerint vannak rendezve. A mentések 
+egyenként illetve egyszerre is törölhetők mind a Mentés-, mind a Megnyitás 
+dialógusablakban. Egy elmentett játék betöltésekor az idő automatikusan elindul, 
+és a játékot onnan-, és azokkal a feltételekkel folytathatjuk, ahol azt 
+abbahagytuk.</FONT></FONT></P>
+<P><U><FONT color=#000000>Szabály:</FONT></U></P>
+<P align=justify><FONT color=#000000>A kövek levételével kapcsolatos 
+alapértelmezett vízszintes szabály a függőleges és az egyszerű&nbsp;szabály 
+kiválasztásával módosítható. Míg alapértelmezésben egy kő akkor jelölhető ki, ha 
+vagy a jobb, vagy a bal oldala teljesen szabad, illetve nincs a tetején másik 
+kő, addig a függőleges szabály alkalmazásával ezek a feltételek módosulnak. A 
+függőleges szabály kiválasztásával egy kő akkor válik kijelölhetővé, ha vagy az 
+alsó, vagy a felső oldala nyitott, illetve szintén nincs a tetején kő. Ha az 
+egyszerű szabályrendszert választjuk, akkor a kövek levételének egyetlen 
+feltétele mindössze annyi, hogy a levenni kívánt kő teteje szabad 
+legyen.</FONT></P>
+<P align=justify>/Minden egyes szabálymódosításnál új játék indul!/</P>
+<P><U>Elrendezés:</U></P>
+<P align=justify>A program a kövek elhelyezésével hatvannyolc&nbsp;alakzatot 
+képes felépíteni.</P>
+<P><U><FONT color=#000000>Eredmények:</FONT></U></P>
+<P align=justify>Az eredménytábla elrendezésenként, 
+azon&nbsp;belül&nbsp;szabályonként&nbsp;tárolja a legjobb tíz 
+teljesítményt.<FONT color=#000000> Eredményünk akkor&nbsp;válik 
+rekorddá,&nbsp;ha időnk benne van a legjobb tízben. Azonos időeredmény esetén 
+kevesebb büntetés elérésével lehet felkerülni&nbsp;a táblára.&nbsp;</FONT><FONT 
+color=#000000> </FONT></P>
+<P align=justify>A rekordok törlésénél lehetőség van a kiválasztott 
+elrendezéshez és szabályrendszerhez tartozó tízes lista törlésére, illetve 
+törölhetjük az összes létező bejegyzést az eredménytáblából.</P>
+<P align=justify>/Az időt és a büntetőmásodperceket hatvan percig méri a 
+program, amikor is az óra megáll, de a játék tovább játszható./</P>
+<P align=justify><U>Kilépés:</U> </P>
+<P align=justify>A Kilépés az Alt-F4 billentyűkombinációval, az ablak 
+bezárásával, illetve menüből kezdeményezhető. A program minden esetben 
+megerősítést kér a kilépést illetően.</P>
+<P>&nbsp;</P>
+<P><EM><STRONG><FONT color=#000000>Műveletek</FONT></STRONG></EM></P>
+<P><FONT color=#000000><U>Újrakezdés:</U></FONT></P>
+<P align=justify><FONT color=#000000>Bármelyik&nbsp;aktuálisan 
+játszott&nbsp;játék akárhányszor&nbsp;előröl kezdhető. Az újrakezdés 
+lehetősége&nbsp;az elmentett állásokra is vonatkozik. </FONT></P>
+<P align=justify><U>Felfüggesztés / Folytatás:</U></P>
+<P align=justify>Lehetőség van a játék megállítására, amikor is egy éjszakai 
+égbolt jelenik meg a játékterület helyén.</P>
+<P><FONT color=#000000><FONT size=+0><U>Visszavonás /</U></FONT><U><FONT 
+size=+0>Ismét:</FONT></U></FONT></P>
+<P align=justify><FONT color=#000000>Egy meggondolatlan lépés visszavonható, 
+valamint egy visszavont művelet újra elvégezhető. Néhány más művelet (keverés, 
+csere, ...) azonban&nbsp;letiltja&nbsp;ezeknek a funkcióknak az elérését. 
+</FONT></P>
+<P><FONT color=#000000><U>Csere:</U></FONT></P>
+<P align=justify><FONT color=#000000>Egy legfelül&nbsp;elhelyezkedő és 
+kijelölhető követ a kupac aljára küldhetünk a csere 
+menüponttal.&nbsp;Kupacnak&nbsp;a pont&nbsp;egymás tetején található, nem 
+átfedésben lévő kövek számítanak.</FONT></P>
+<P><FONT color=#000000><U>Keverés:</U></FONT></P>
+<P align=justify><FONT color=#000000>Ha nincs, vagy csak kevés levehető pár van 
+a táblán, akkor érdemes a köveket megkeverni, hogy újabb párok váljanak 
+szabaddá.</FONT></P>
+<P align=justify>/A program véletlenszerűen keveri a köveket, ezért főleg kis 
+mennyiségű köveknél előfordul, hogy a keverés utáni állapot megegyezik a keverés 
+előttivel./</P>
+<P><FONT color=#000000><U>Segítség:</U></FONT></P>
+<P align=justify><FONT color=#000000>Abban az esetben, ha már végképp nem 
+találjuk a levehető párokat, érdemes a segítség ikonra kattintani, amikor is 
+klikkelésenként megvillannak az értékben egyező kövek.&nbsp;Mindez persze 
+büntetőmásodpercek terhe mellett.</FONT></P>
+<P>&nbsp;</P>
+<P><EM><STRONG><FONT color=#000000>Nézet</FONT></STRONG></EM></P>
+<P><U><FONT color=#000000>Eszköztár:</FONT></U></P>
+<P align=justify><FONT color=#000000>Beállítható, hogy látszódjanak-e menüsor 
+alatt elhelyezkedő&nbsp;ikonok.</FONT> </P>
+<P><FONT color=#000000><U>Állapotsor:</U></FONT></P>
+<P align=justify><FONT color=#000000>Megjeleníthető, illetve elrejthető a 
+program képernyőjének alján található információs mező.&nbsp;Ennek<FONT size=+0> 
+bal oldalán a menüpontok leírása, míg a jobb oldalán a játék aktuális 
+állapotával kapcsolatos legfontosabb információk jelennek meg. A jobb oldalon 
+található mezők egyenként elrejthetők illetve megjeleníthetők az állapotsor 
+helyi menüjének segítségével.</FONT></FONT></P>
+<P><FONT color=#000000><U>Kőpaletta:</U></FONT></P>
+<P align=justify><FONT color=#000000>A Kőpaletta büntetőmásodpercek kiszabása 
+nélkül nyújt jelentős segítséget a párok megtalálásához. A palettán, 
+beállítástól függően azoknak a köveknek a &nbsp;képei jelennek meg, melyek 
+területére bevisszük az egérkurzort. A beállításokat a kőpaletta területén egy 
+jobb egérkattintással előhívott helyi menüben lehet változtatni. A 
+megjelenítéssel kapcsolatos információk a következők lehetnek:</FONT></P>
+<UL>
+  <LI>
+  <DIV align=justify><FONT color=#000000>Kijelölhetők: A paletta csak azokat a 
+  köveket jeleníti meg, melyeket a beállított szabály figyelembevételével ki 
+  lehet jelölni.</FONT></DIV>
+  <LI>
+  <DIV align=justify><FONT color=#000000>Levehetők: Csak azon kövek képei 
+  lesznek láthatóak, melyeknek legalább egy, értékben hozzáillő párja is 
+  kijelölhető, és ezáltal a pár levehető.</FONT></DIV>
+  <LI>
+  <DIV align=justify><FONT color=#000000>Felsők: Minden olyan követ megjelenít a 
+  palettán, amelyek egy kupac tetején helyezkednek el.</FONT></DIV>
+  <LI>
+  <DIV align=justify>Mindegyik: Megmutat minden olyan követ, melyek nincsenek 
+  teljes takarásban.</DIV>
+  <LI>
+  <DIV align=justify><FONT color=#000000>Mutassa az alatta lévőket: Ha 
+  kiválasztásra kerül ez az opció, akkor azok a kövek is láthatóvá válnak, 
+  melyek a legfelső kő vonalában helyezkednek el az alsóbb 
+  rétegekben.</FONT></DIV></LI></UL>
+<P align=justify><FONT color=#000000>A paletta helyi menüje további 
+beállításokat is felkínál. Ezek a menüpontok a játékterületen való 
+elhelyezésével, és a kövek&nbsp;kinézetével&nbsp;kapcsolatosak. A kőpaletta az 
+elrejtés után a Nézet menü Kőpaletta opciójával csalogatható elő 
+újra.</FONT></P>
+<P align=justify>/A függőleges fekvésű kőpaletta fentről lefelé, a vízszintes 
+fekvésű pedig balról jobbra helyezi el az egyre mélyebb rétegekben található 
+köveket!/</P>
+<P>&nbsp;</P></FONT><FONT size=+0>
+<P><FONT color=#000000><EM><STRONG>Beállítások</STRONG></EM></FONT></P>
+<P><U><FONT color=#000000>Stílus:</FONT></U></P>
+<P align=justify><FONT color=#000000>A Mahjongg játék 
+huszonegy</FONT></FONT></FONT></FONT><FONT color=#004080><FONT 
+color=#000000><FONT size=+0><FONT color=#000000>féle&nbsp;kőkészletéből lehet 
+kiválasztani a kövek tetején lévő képet.</FONT></P>
+<P><U>Mintázat:</U></P>
+<P align=justify>A kövek oldalán található mintázat&nbsp;tizenháromféle 
+színsémából&nbsp;kerülhet ki.</P>
+<P><U>Térhatás:</U></P>
+<P align=justify>A program a térhatást a kövek eltolásával éri el, így 
+megadható, hogy az melyik irányba történjen. A térhatás változtatásával a 
+takarásban lévő kövek is láthatóvá válnak.</P>
+<P><U><FONT color=#000000>Háttér:</FONT></U></P>
+<P align=justify>Néhány kőkészlet könnyen beleolvadhat a háttérbe, ami a kép 
+cseréjével könnyen kiküszöbölhető. Háttérnek választható egy kép, egy textúra, 
+illetve egy színátmenetes kitöltés, ahol megadható a színséma és a kitöltés 
+iránya.&nbsp;</P>
+<P></FONT>&nbsp;</P></FONT></FONT>
+<H2><A name=""></A><A name=""></A><FONT 
+face="Monotype Corsiva"><A 
+name=shortcuts></A>Billentyűkombinációk</FONT></H2><FONT 
+color=#004080><FONT color=#000000>
+<DL>
+  <DT>
+  <DIV align=justify><FONT color=#000000>A program&nbsp;számos&nbsp;műveletéhez 
+  felkínál egy-egy billentyűkombinációt, melyek a gyorsabb használatot teszik 
+  lehetővé. </FONT></DIV></DT></DL>
+<P>&nbsp;</P>
+<P>
+<TABLE borderColor=#000000 cellSpacing=1 cellPadding=1 width=450 align=center 
+border=1>
+  
+  <TR>
+    <TD align=middle><STRONG><EM>Ikon</EM></STRONG></TD>
+    <TD align=middle><EM><STRONG><FONT 
+      color=#000000>Művelet</FONT></STRONG></EM></TD>
+    <TD align=middle><EM><STRONG><FONT 
+      color=#000000>Billentyűkombináció</FONT></STRONG></EM></TD></TR>
+  <TR>
+    <TD align=middle><IMG hspace=0 src="new.gif" align=baseline 
+      border=0  ?></TD>
+    <TD><FONT color=#000000>Új játék </FONT></TD>
+    <TD align=left><FONT color=#000000>F2</FONT></TD></TR>
+  <TR>
+    <TD align=middle><IMG hspace=0 src="newgamenumber.gif" 
+      align=baseline border=0  ?></TD>
+    <TD><FONT color=#000000>Játék kiválasztása </FONT></TD>
+    <TD align=left><FONT color=#000000>F3</FONT></TD></TR>
+  <TR>
+    <TD align=middle><IMG hspace=0 src="open.gif" align=baseline 
+      border=0  ?></TD>
+    <TD><FONT color=#000000>Megnyitás</FONT></TD>
+    <TD align=left><FONT color=#000000>Ctrl-O</FONT></TD></TR>
+  <TR>
+    <TD align=middle><IMG hspace=0 src="save.gif" align=baseline 
+      border=0  ?></TD>
+    <TD><FONT color=#000000>Mentés</FONT></TD>
+    <TD align=left><FONT color=#000000>Ctrl-S</FONT></TD></TR>
+  <TR>
+    <TD align=middle><IMG hspace=0 src="result.gif" align=baseline 
+      border=0  ?></TD>
+    <TD><FONT color=#000000>Eredmények </FONT></TD>
+    <TD align=left><FONT color=#000000>Ctrl-R</FONT></TD></TR>
+  <TR>
+    <TD align=middle><IMG hspace=0 src="exit.gif" align=baseline 
+      border=0  ?></TD>
+    <TD><FONT color=#000000>Kilépés</FONT></TD>
+    <TD align=left><FONT color=#000000>Alt-F4</FONT></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><FONT color=#000000>&nbsp;</FONT></TD>
+    <TD><FONT color=#000000>&nbsp;</FONT></TD></TR>
+  <TR>
+    <TD align=middle><IMG hspace=0 src="restart.gif" align=baseline 
+      border=0  ?></TD>
+    <TD><FONT color=#000000>Újrakezdés </FONT></TD>
+    <TD align=left><FONT color=#000000>Ctrl+Alt-R</FONT></TD></TR>
+  <TR>
+    <TD noWrap align=middle><IMG style="WIDTH: 16px; HEIGHT: 16px" alt="" 
+      hspace=0 src="pause.gif" align=middle border=0  ?>&nbsp;/<IMG 
+      style="WIDTH: 16px; HEIGHT: 16px" alt="" hspace=0 src="resume.gif" 
+      align=middle border=0  ?></TD>
+    <TD>Felfüggesztés / Folytatás</TD>
+    <TD align=left>Ctrl+P</TD></TR>
+  <TR>
+    <TD align=middle><IMG hspace=0 src="undo.gif" align=baseline 
+      border=0  ?></TD>
+    <TD><FONT color=#000000>Visszavonás </FONT></TD>
+    <TD align=left><FONT color=#000000>Ctrl-Z</FONT></TD></TR>
+  <TR>
+    <TD align=middle><IMG hspace=0 src="redo.gif" align=baseline 
+      border=0  ?></TD>
+    <TD><FONT color=#000000>Ismét </FONT></TD>
+    <TD align=left><FONT color=#000000>Ctrl+Shift-Z</FONT></TD></TR>
+  <TR>
+    <TD align=middle><IMG hspace=0 src="swap.gif" align=baseline 
+      border=0  ?></TD>
+    <TD><FONT color=#000000>Csere </FONT></TD>
+    <TD align=left><FONT color=#000000>Ctrl-C</FONT></TD></TR>
+  <TR>
+    <TD align=middle><IMG hspace=0 src="shuffle.gif" align=baseline 
+      border=0  ?></TD>
+    <TD><FONT color=#000000>Keverés </FONT></TD>
+    <TD align=left><FONT color=#000000>Ctrl+Alt-S</FONT></TD></TR>
+  <TR>
+    <TD align=middle><IMG hspace=0 src="help.gif" align=baseline 
+      border=0  ?></TD>
+    <TD><FONT color=#000000>Segítség</FONT></TD>
+    <TD align=left><FONT color=#000000>Ctrl-H</FONT></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD>
+      <P align=center>&nbsp;-</P></TD>
+    <TD>Háttér</TD>
+    <TD>Ctrl-B</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><FONT color=#000000>&nbsp;&nbsp;</FONT></TD>
+    <TD><FONT color=#000000>&nbsp;&nbsp;</FONT></TD></TR>
+  <TR>
+    <TD align=middle><IMG style="WIDTH: 16px; HEIGHT: 16px" alt="" hspace=0 
+      src="help.png" align=baseline border=0  ?></TD>
+    <TD><FONT color=#000000>Használat</FONT></TD>
+    <TD align=left><FONT color=#000000>F1</FONT></TD></TR>
+  <TR>
+    <TD align=middle><IMG hspace=0 src="about.gif" align=baseline 
+      border=0  ?></TD>
+    <TD><FONT color=#000000>Névjegy</FONT></TD>
+    <TD align=left><FONT color=#000000>Ctrl-N</FONT></TD></TR></TABLE></P>
+<P align=center>&nbsp;</P></FONT></FONT></FONT></FONT></FONT></FONT>
+<H2 align=left><FONT face="Monotype Corsiva"><A name=end></A>És végül...</FONT></H2><FONT 
+face="Monotype Corsiva" color=#004080><FONT color=#004080><FONT 
+color=#000000><FONT face="Times New Roman">
+<DL>
+  <DT>
+  <DIV align=justify>        
+              
+           
+          
+    Ha a program működésével kapcsolatban bármilyen hibát észlelnél, 
+  vagy csak egyéb észrevételed, javaslatod van, kérlek,&nbsp;küldj egy 
+  e-mailt&nbsp;a <A 
+  href="mailto:smigura.antal@freemail.hu">részemre</A>!</DIV>
+<!--  <DT>-->
+<!--  <DIV align=justify>&nbsp;</DIV>-->
+<!--  <DT>-->
+<!--  <DIV align=justify>A program honlapja az alábbi&nbsp;linkeken keresztül érhető -->
+<!--  el:</DIV>-->
+<!--  <DT>-->
+<!--  <DIV align=justify>&nbsp;</DIV>-->
+<!--  <DT>-->
+<!--  <DIV align=left>      -->
+<!--  <A href="http://www.ant.fx3.hu" -->
+<!-- >www.ant.fx3.hu</A></DIV>-->
+<!--  <DT>-->
+<!--  <DIV align=left><A -->
+<!--href="http://www.ant.xw.hu" -->
+<!-- >www.ant.xw.hu</A></DIV></DT></DL>-->
+<P align=justify>&nbsp;</P></FONT></FONT></FONT></FONT>
+<H2 align=center>Jó szórakozást!</H2><FONT 
+face="Monotype Corsiva" color=#004080><FONT color=#004080><FONT 
+color=#000000><FONT face="Times New Roman">
+<P align=justify>&nbsp;</P>
+<P align=center><IMG style="WIDTH: 43px; HEIGHT: 53px" alt="" hspace=0 
+src="ant.png" align=baseline border=0  ?></P></FONT>
+<P></FONT></FONT>&nbsp;</P></FONT>
+</BODY></HTML>
