@@ -25,7 +25,7 @@ The game application also had a website, and its static version can be accessed 
 
 The application is designed for an 800x600 resolution, so the details may not display optimally on today's high-resolution monitors.
 
-## Screenshot
+## Screenshots
 
 <img src=docs/picture/classic.png alt="" width="600">
 <br>
