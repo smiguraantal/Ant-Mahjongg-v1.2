@@ -4,10 +4,13 @@
 
 The Ant-Mahjongg v1.2 is a classic solitaire-style game that I developed between 2004 and 2005 using the Swing Framework. The application was published in 2005 on the Origo Szoftverbázis website.
 
-## Requirements
+## Requirements and Setup
+
 Java Runtime Environment (JRE) 1.8
 
 Note: The program is optimized for JRE 1.8 and may not run correctly on newer versions.
+
+To start the application, run the `AntMahjongg.java` file located in the `org.example` package.
 
 ## Source code
 
